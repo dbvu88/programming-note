@@ -1,3 +1,5 @@
+html,
+body,
 #root {
   height: 100vh;
   background: #dddad8;
@@ -9,8 +11,13 @@
 
 .tool-bar * {
   /* position: static; */
-  background: #dddad8;
-  color: #535c5f;
+  background: #2e2f2f;
+  color: #cafa8c;
+}
+
+.tool-bar {
+  margin-bottom: 16px;
+  background: #2e2f2f;
 }
 
 /* .MuiTypography-h6 {
@@ -18,5 +25,13 @@
 } */
 
 .post {
+  /* margin: 16px 0px; */
   padding: 16px;
+}
+
+pre {
+  overflow: scroll;
+  padding: 16px;
+  background: #2e2f2f;
+  color: #cafa8c;
 }

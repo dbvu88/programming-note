@@ -24,18 +24,47 @@ function App() {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <Toolbar className="tool-bar">
-          <Typography variant="h6">Learn To Code</Typography>
+          <Typography variant="h6">_Learn To Code</Typography>
         </Toolbar>
-        <Container
-          className="container"
-          // style={{ backgroundColor: "#cfe8fc", height: "100vh" }}
-        >
+        <Container className="container">
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <Paper elevation={0} className="post">
+              <Paper elevation={1} className="post">
                 <Typography variant="h6" gutterBottom>
-                  How to Use Promise.All()
+                  Examples of Promise.All()
                 </Typography>
+                <Typography>
+                  <pre>
+                    {`const users = [
+  {
+    user_id: 1,
+    username: "the_lonely_guy"
+  },
+  { 
+    user_id: 2,
+    username: "awesome_person"
+  },
+  {
+    user_id: 3,
+    username: "someone_you_used_to_know"
+  }
+];`}
+                  </pre>
+                </Typography>
+                <Typography>
+                  <div className="code-container" />
+
+                  <p>
+                    Etiam porta sem malesuada magna mollis euismod. Cras mattis
+                    consectetur purus sit amet fermentum. Aenean lacinia
+                    bibendum nulla sed consectetur.
+                  </p>
+                </Typography>
+              </Paper>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Paper>
                 <Typography>
                   Etiam porta sem malesuada magna mollis euismod. Cras mattis
                   consectetur purus sit amet fermentum. Aenean lacinia bibendum
@@ -43,10 +72,19 @@ function App() {
                 </Typography>
               </Paper>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
+              <Paper>
+                <Typography>
+                  Etiam porta sem malesuada magna mollis euismod. Cras mattis
+                  consectetur purus sit amet fermentum. Aenean lacinia bibendum
+                  nulla sed consectetur.
+                </Typography>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6}>
               <Paper>xs=6</Paper>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <Paper>xs=6</Paper>
             </Grid>
             <Grid item xs={3}>
