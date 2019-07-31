@@ -30,6 +30,7 @@ body,
 }
 
 pre {
+  line-height: 1.5;
   overflow: scroll;
   padding: 16px;
   background: #2e2f2f;
