@@ -1,20 +1,19 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import "./prism.css";
 import { Route, NavLink } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
+import CodeBlock from "./CodeBlock";
 import {
   AppBar,
   Container,
   Typography,
   Toolbar,
   Grid,
-  Paper
+  Paper,
+  CssBaseline
 } from "@material-ui/core/";
-
-import Prism from "prismjs";
 
 const theme = createMuiTheme({
   typography: {
@@ -23,13 +22,14 @@ const theme = createMuiTheme({
 });
 
 class App extends React.Component {
-  componentDidMount() {
-    Prism.highlightAll();
-  }
+  // componentDidMount() {
+  //   Prism.highlightAll();
+  // }
 
   render() {
     return (
       <React.Fragment>
+        <CssBaseline />
         <ThemeProvider theme={theme}>
           <Toolbar className="tool-bar">
             <Typography variant="h6">_Learn To Code</Typography>
@@ -45,19 +45,15 @@ class App extends React.Component {
                     1. <code>Promise.All()</code> allows us to execute multiple
                     Promises inside an array:
                   </Typography>
-                  {/* <textarea> */}
-                  <pre>
-                    <code className="language-javascript">
-                      {`Promise.all([ 
+                  <CodeBlock
+                    snippet={`Promise.all([
   new Promise(resolve => resolve("chicken")), 
   new Promise(resolve => resolve("duck")), 
   new Promise(resolve => resolve("cow")), 
   new Promise(resolve => resolve("dog")), 
-  new Promise(resolve => resolve("cat")) 
-]).then(result => console.log(result));`}
-                    </code>
-                  </pre>
-                  {/* </textarea> */}
+  new Promise(resolve => resolve("cat"))
+]).then(result => result);`}
+                  />
                   <Typography>
                     When every Promise in the array is done executing, it will
                     either resolve in an array of results or reject a single
