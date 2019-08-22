@@ -1,7 +1,17 @@
 import React from "react";
-// import "./prism.css";
 import RunIcon from "@material-ui/icons/KeyboardArrowRight";
-import { Button, Card, Grid, Container, Paper } from "@material-ui/core/";
+import { Button, Grid, Paper } from "@material-ui/core/";
+import {
+  Box,
+  Hero,
+  Navbar,
+  Heading,
+  Container,
+  Columns,
+  Card,
+  Content,
+  Menu
+} from "react-bulma-components";
 
 import Prism from "prismjs";
 
@@ -29,31 +39,30 @@ class CodeBlock extends React.Component {
     console.log(this.state);
     return (
       //   <Container className="code-block">
-      <Grid container spacing={0}>
-        <Grid item xs={12}>
-          <pre>
-            <code className="language-javascript">{snippet}</code>
-          </pre>
-        </Grid>
-        <Grid item xs={12} md={2}>
-          <Button
+      <div>
+        {/* <Grid item xs={12}> */}
+        <pre style={{ background: "black", fontSize: "1em" }}>
+          <code className="language-javascript">{snippet}</code>
+        </pre>
+        {/* </Grid> */}
+        {/* <Grid item xs={12} md={2}> */}
+        {/* <Button
             onClick={() => this.run(snippet)}
             variant="outlined"
             color="secondary"
           >
             <code>Run Code</code>
             <RunIcon />
-          </Button>
-        </Grid>
-        <Grid item xs={12} md={10}>
+          </Button> */}
+        {/* </Grid> */}
+        {/* <Grid item xs={12} md={10}>
           <Paper elevation={0} className="output">
             <pre>
               <code className="language-javascript">{this.state.output}</code>
             </pre>
           </Paper>
-        </Grid>
-      </Grid>
-      //   </Container>
+        </Grid> */}
+      </div>
     );
   }
 }
